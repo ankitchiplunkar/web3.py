@@ -444,6 +444,9 @@ PYTHONIC_RESULT_FORMATTERS: Dict[RPCEndpoint, Callable[..., Any]] = {
     RPC.evm_snapshot: hex_to_integer,
     # Net
     RPC.net_peerCount: to_integer_if_hex,
+    # Parity
+    RPC.parity_nextNonce: to_integer_if_hex,
+    RPC.parity_allTransactions: apply_formatter_to_array(transaction_formatter),
 }
 
 

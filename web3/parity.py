@@ -228,3 +228,15 @@ class Parity(Module):
             RPC.parity_mode,
             []
         )
+
+    def nextNonce(self, account):
+    	return self.web3.manager.request_blocking(
+            RPC.parity_nextNonce, 
+            [account]
+        )
+
+    def allTransactions(self):
+        return self.web3.manager.request_blocking(
+            RPC.parity_allTransactions, 
+            []
+        )

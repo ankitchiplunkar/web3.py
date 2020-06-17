@@ -112,6 +112,8 @@ class RPC:
     parity_netPeers = RPCEndpoint("parity_netPeers")
     parity_mode = RPCEndpoint("parity_mode")
     parity_setMode = RPCEndpoint("parity_setMode")
+    parity_nextNonce = RPCEndpoint("parity_nextNonce")
+    parity_allTransactions = RPCEndpoint("parity_allTransactions")
 
     # personal
     personal_ecRecover = RPCEndpoint("personal_ecRecover")
